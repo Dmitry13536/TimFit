@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Кнопка при нажатии на ссылку</title>
+        <style>
+            .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%; /* Занимает всю ширину контейнера */
+    height: 100%; /* Занимает всю высоту контейнера*/
+    object-fit: cover; /* Обрезает изображение до границ ячейки */
+    border: 1px solid #ccc;
+}
+
+
+
+        </style>
+    </head>
+    <body>
+    
+        <div class="gallery">
+            <img src="imgs/IMG_0511.jpg" alt="Описание изображения 1">
+            <img src="imgs/IMG_0512.jpg" alt="Описание изображения 2">
+            <img src="imgs/IMG_0513.jpg" alt="Описание изображения 3">
+            <img src="imgs/IMG_0514.jpg" alt="Описание изображения 4">
+            <img src="imgs/IMG_0515.jpg" alt="Описание изображения 5">
+            <img src="imgs/IMG_0516.jpg" alt="Описание изображения 6">
+            <!-- Добавьте столько изображений, сколько нужно -->
+        </div>
+        
+            
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const showButtonLinks = document.querySelectorAll('.script1');
+    const floatingButton = document.getElementById('floating-button');
+    let isButtonVisible = false;
+
+    // Функция для отображения кнопки
+    function showButton() {
+        floatingButton.style.display = 'block';
+        isButtonVisible = true;
+    }
+
+    // Функция для скрытия кнопки
+    function hideButton() {
+        floatingButton.style.display = 'none';
+        isButtonVisible = false;
+    }
+
+    // Обработчик нажатия на кнопку
+    floatingButton.addEventListener('click', function() {
+        hideButton();
+    });
+
+    // Обработчик прокрутки страницы
+    window.addEventListener('scroll', function() {
+        if (window.scrollY === 0) {
+          hideButton();
+        }
+    });
+
+    // Обработчик нажатия на ссылки
+    showButtonLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Предотвращаем стандартное действие ссылки
+        if(!isButtonVisible)
+          showButton();
+      });
+    });
+
+});
+
+        </script>
+    </body>
+    </html>

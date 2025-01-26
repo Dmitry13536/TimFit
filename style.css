@@ -1,0 +1,871 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: normal;
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: bold;
+    src: url(fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: lighter;
+    src: url(fonts/Roboto/Roboto-Light.ttf);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.computer{
+    display: none;
+}
+
+body{
+    background-color: #E3E3E3;
+    display: flex;
+    flex-direction:column ;
+}
+
+a{color: #000000;}
+
+li{
+    font-family: 'Roboto';
+}
+
+p{
+    font-family: 'Roboto';
+    color: #37474F;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:active{
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+header{
+    padding: 4% 7%;
+    display: flex;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+header i{
+    font-size: 30px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 30%;
+    margin-right: 4%;
+}
+
+.Naz{
+    font-weight: bold;
+    color: #37474F;
+    font-size: 30px;
+}
+
+.Naz span{
+    color: #017442;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+}
+
+header li{
+    display: inline-block;
+    margin-right: 1em;
+}
+
+header li a{
+    color: #37474F;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+header li a:hover{
+    text-decoration: underline;
+}
+
+header button{
+    background-color: #017442;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 1% 2%;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 3px 3px 0 2px rgba(0,0,0, 0.5);
+
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15% 0;
+    background-image: url(imgs/banner.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner p{
+    font-weight: bold;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-bottom: 10%;
+    text-shadow: 3px 3px 3px rgba(0,0,0, 0.5);
+}
+
+.banner button{
+    background-color: #017442;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 4% 7%;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 3px 3px 0 2px rgba(0,0,0, 0.5);
+}
+
+.info{
+    background-color: white;
+    box-shadow: 2px 2px 1px rgba(0,0,0, 0.5);
+    margin: 10% 6%;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 2%;
+}
+
+.info .computer{
+    width: 70%;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.mainImg{
+    width: 100%;
+    height: 28em;
+    margin-bottom: 2em ;
+    object-fit: cover;
+}
+
+.minImgs{
+    width: 100%;
+    display: grid;
+    grid-row-gap: 4%;
+    grid-column-gap: 1%;
+    grid-template-columns: repeat(7, 1fr);
+
+}
+
+.minCard{
+    width: 2%;
+    background-color: #017442;
+    aspect-ratio: 1 / 1;
+}
+
+.minCard:hover{
+    cursor: pointer;
+}
+
+.minImgs img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.Zag{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #37474F;
+    text-shadow: 4px 4px 9px rgba(4,4,4, 0.5);
+    margin: 4% 0;
+}
+
+.Zag1{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #37474F;
+    text-shadow: 4px 4px 9px rgba(4,4,4, 0.5);
+    margin: 4% 0;
+}
+
+
+.info .Naz{
+    font-size: 22px;
+    margin: 4% 0;
+    padding-left: 5% ;
+}
+
+.mainInfo p{
+    text-align: justify;
+    font-size: 20px;
+    color: #37474F;
+}
+
+.mainInfo li{
+    margin-left: 1em;
+    font-size: 20px;
+    color: #37474F;
+}
+
+.mainInfo .text{
+    margin-bottom: 7%;
+    padding: 0 6%;
+}
+
+.Naz.other{
+    margin-top: 24%;
+    margin-bottom: 1%;
+}
+
+.mainInfo ul{
+    padding: 0 0 7% 5%;
+}
+
+.subs{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15%;
+}
+
+.sub{
+    background-color: white;
+    border-radius: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 10% 6% 7% 6%;
+    margin-bottom: 6%;
+    box-shadow: 2px 2px 1px rgba(0,0,0, 0.5);
+}
+
+.sub li{
+    font-size: 15px;
+}
+
+.sub hr{
+    margin: 3% 0;
+}
+
+.sub div{
+    height: 8em;
+}
+
+.zg{
+    padding: 1em 0 0 1em;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+.sub button{
+    align-self: center;
+    background-color: #017442;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 2% 9%;
+    font-size: 20px;
+    font-family: 'roboto';
+    font-weight: lighter;
+    margin: 2% 0 1em 0;
+}
+
+.sub .cost{
+    font-size: 15px;
+    font-weight: bold;
+    align-self: center;
+    color: #017442;
+}
+
+
+.tab{
+    background-color: white;
+    margin: 0 6%;
+    padding-bottom: 90% ;
+    box-shadow: 2px 2px 1px rgba(0,0,0, 0.5);
+    margin-top: 12%;
+}
+
+.tab .Zag{
+    font-size: 20px;
+}
+
+.team{
+    margin: 12% 0;
+    padding: 6% 6%;
+    background-color: white;
+    border: 2px solid transparent;
+    
+}
+
+.teamate{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 3%;
+    grid-column-gap: 2%;
+}
+
+.teamate1{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-column-gap: 2%;
+    margin: 0 16%;
+}
+
+.mate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mate img{
+    width: 100%;
+    height: auto;
+    
+}
+
+.mate p {
+    text-align: center;
+    font-size: 10px;
+}
+
+.mate .name{
+    font-size: 12px;
+}
+
+iframe{
+    margin: 0 6%;
+    width: 88%;
+    height: 27em;
+}
+
+.overFooter{
+    
+    padding: 4% 6%;
+    margin-top: 12% ;
+    background-color: white;
+}
+
+.big{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.green{
+    color: #017442;
+    margin: 6% 0 1% 0;
+}
+
+.socWeb{
+    margin-top: 6%;
+}
+
+.socWeb a{
+    margin: 0 0 0 3%;
+    font-size: 36px;
+    color: #000000;
+
+}
+
+footer{
+    background-color: #37474F;
+    padding: 3% 6% 26% 6%;
+    display: flex;
+}
+
+footer img{
+    border-radius: 100%;
+    width: 5em;
+    margin-right: 1%;
+}
+
+footer .Naz{
+    color: white;
+}
+
+footer p{
+    color: white;
+}
+
+#floating-button {
+    display: none; /* Скрываем кнопку по умолчанию */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 26px 30px;
+    background-color: #017442;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 80px;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+
+#modal{
+    z-index: 11;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    width: 35%;
+    background-color: white;
+    border-radius: 40px 40px 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.up-modal{
+    position: fixed;
+    top: 0px;
+    background-color: #017442;
+    width: 100%;
+    padding: 1em 2em;
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
+}
+
+.up-modal p{
+    color: white;
+    justify-self: center;
+    margin: 0 auto;
+}
+
+.up-modal span{
+    font-size: 40px;
+}
+
+.up-modal span:hover{
+    cursor: pointer;
+}
+
+.down-modal{
+    padding: 2em 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.down-modal input {
+    padding: 4%;
+    border: none;
+    background-color: #E3E3E3;
+    box-shadow: 2px 2px 2px rgba(0,0,0, 0.5);
+}
+
+.down-modal .buttons{
+    
+    margin: 0.5em 0 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.down-modal button{
+    padding: 2%;
+    font-size: 13px;
+    border: none;
+    background-color: #E3E3E3;
+    box-shadow: 2px 2px 2px rgba(0,0,0, 0.5);
+}
+
+
+#modal2{
+    z-index: 11;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content2{
+    background-color: #E3E3E3;
+    width: 100%;
+}
+
+
+.modal-content2 .subs{
+    margin-top: 10em;
+    max-height: 100vh;
+    overflow-y: auto;
+    margin: 0;
+    margin-top: 1em;
+}
+
+.modal-content2 .sub{
+    margin: 1em 1em;
+}
+
+.modal-content2 .sub1{
+    margin-top: 6em;
+}
+
+.modal-content2 .sub div{
+    height: 9em;
+}
+
+header.sticky{
+    position: fixed;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
+
+@media(min-width: 800px){
+    .banner p{
+        font-size: 42px;
+    }
+    .banner button{
+        font-size: 26px;
+    }
+
+    .info .Naz{
+        font-size: 27px;
+    }
+
+    .mainInfo p{
+        font-size: 20px;
+    }
+
+    .mainInfo li{
+        font-size: 18px;
+    }
+
+    .subs{
+        margin: 0 24%;
+    }
+
+    .zg{
+        font-size: 30px;
+    }
+
+    .sub li{
+        font-size: 20px;
+    }
+
+    .sub .cost{
+        font-size: 22px;
+    }
+
+    .sub button{
+        padding: 4% 13%;
+    }
+
+    .team{
+        padding: 2% 6%;
+    }
+
+    .mate img{
+        width: 12em;
+    }
+
+    .mate p{
+        font-size: 12px;
+    }
+
+    .mate .name{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #modal{
+        z-index: 11;
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-content{
+        width: 35%;
+        background-color: white;
+        border-radius: 40px 40px 30px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .up-modal{
+        position: relative;
+        background-color: #017442;
+        border-radius: 30px 30px 0 0;
+        padding: 1em 2em;
+        color: white;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
+          
+          
+      
+    }
+    
+    .up-modal p{
+        color: white;
+        justify-self: center;
+        margin: 0 auto;
+    }
+    
+    .up-modal span{
+        font-size: 40px;
+    }
+    
+    .up-modal span:hover{
+        cursor: pointer;
+    }
+    
+    .down-modal{
+        padding: 2em 3em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    
+    .down-modal input {
+        padding: 4%;
+        border: none;
+        background-color: #E3E3E3;
+        box-shadow: 2px 2px 2px rgba(0,0,0, 0.5);
+    }
+    
+    .down-modal .buttons{
+        
+        margin: 0.5em 0 1em 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .down-modal button{
+        padding: 2%;
+        font-size: 13px;
+        border: none;
+        background-color: #E3E3E3;
+        box-shadow: 2px 2px 2px rgba(0,0,0, 0.5);
+    }
+    
+    
+    #modal2{
+        z-index: 11;
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-content2{
+        background-color: #E3E3E3;
+        border-radius: 60px;
+        width: 80%;
+    }
+    
+    .modal-content2 .up-modal{
+        border-radius: 50px 50px 0 0;
+    }
+    
+    .modal-content2 .subs{
+        margin-top: 1em;
+    }
+    
+    .modal-content2 .sub{
+        margin: 1em 1em;
+    }
+    
+    .modal-content2 .sub div{
+        height: 17em;
+    }
+
+    .mobile{
+        display: none;
+    }
+    .computer{
+        display: block;
+    }
+
+    header{
+        padding: 2% 5%;
+    }
+
+    .logo img{
+        width: 40%;
+    }
+
+    .banner{
+        padding: 10% 0;
+    }
+
+    .banner p{
+        font-size: 80px;
+    }
+    .banner button{
+        font-size: 30px;
+        padding: 3% 5%;
+    }
+
+    .info{
+        margin: 5% 6%;
+    }
+
+    .infoFlex{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info .Naz{
+        font-size: 25px;
+    }
+
+    .mainInfo p{
+        font-size: 20px;
+    }
+
+    .mainInfo li{
+        font-size: 23px;
+    }
+
+    .Zag {
+        font-size: 40px;
+    }   
+
+    .subs{
+        margin-top: 3% ;
+        margin: 0 6%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .sub{
+        padding: 2% 3%;
+        margin: 0 1% 
+    }
+
+    .sub div{
+        height: 18em;
+    }
+
+    .zg{
+        font-size: 35px;
+    }
+
+    .sub li{
+        font-size: 26px;
+    }
+
+    .sub .cost{
+        font-size: 28px;
+    }
+
+    .sub button{
+        padding: 4% 15%;
+    }
+
+    .team{
+        padding: 2% 6%;
+        margin: 4% 0;
+    }
+
+    .tab{
+        margin-top: 6%;
+    }
+
+    .teamate{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .teamate img{
+        margin-bottom: 2%;
+        width: 100%;
+        height: auto;
+    }
+
+    .team .Zag1{
+        font-size: 40px;
+    }
+
+    .footerFlex{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .overFooter{
+        padding: 5% 8%;
+        margin-top: 6%;
+    }
+
+    .overFooter p{
+        font-size: 22px;
+    }
+
+    .overFooter .big{
+        font-size: 26px;
+    }
+
+    iframe{
+        width: 35em;
+        margin-right: 5em;
+    }
+
+    footer{
+        padding: 4% 6% 9% 6%;
+    }
+}
